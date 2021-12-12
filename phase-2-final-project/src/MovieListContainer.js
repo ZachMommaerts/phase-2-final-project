@@ -1,9 +1,4 @@
 import { useEffect, useState } from 'react';
-import NewlyReleasedList from './NewlyReleasedList';
-import ActionList from './ActionList';
-import ComedyList from './ComedyList';
-import HorrorList from './HorrorList';
-import SciFiList from './SciFiList';
 import MovieList from './MovieList';
 
 function MovieListContainer() {
@@ -11,13 +6,11 @@ function MovieListContainer() {
 
     return (
         <div>
-            <MovieList genre='28' />
-            <MovieList genre='35' />
-            <NewlyReleasedList />
-            <ActionList />
-            <ComedyList />
-            <HorrorList />
-            <SciFiList />
+            <MovieList genreName='Action' genre='28' />
+            <MovieList genreName='Comedy'genre='35' />
+            <MovieList genreName='Horror'genre='27' />
+            <MovieList genreName='Sci-Fi'genre='878' />
+            <MovieList genreName='Fantasy'genre='14' />
         </div>
     )
 }
