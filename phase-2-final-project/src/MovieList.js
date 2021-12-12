@@ -2,6 +2,11 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import MovieCard from './MovieCard';
 
+const ListOfMovies = styled.div `
+    display: flex;
+    overflow: auto;
+`;
+
 function MovieList({ genre, genreName }) {
     const [ movies, setMovies] = useState([])
 
@@ -24,10 +29,10 @@ function MovieList({ genre, genreName }) {
     })
 
     return (
-        <div>
+        <ListOfMovies>
             <h2>{genreName} movies</h2>
             {movieList}
-        </div>
+        </ListOfMovies>
     )
 }
 
