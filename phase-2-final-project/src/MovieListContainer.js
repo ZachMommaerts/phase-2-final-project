@@ -4,20 +4,15 @@ import ActionList from './ActionList';
 import ComedyList from './ComedyList';
 import HorrorList from './HorrorList';
 import SciFiList from './SciFiList';
+import MovieList from './MovieList';
 
 function MovieListContainer() {
     const [ movieList, setMovieList] = useState([])
 
-    function getMovies() {
-        fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.REACT_APP_API_KEY}`)
-        .then(r => r.json())
-        .then(movies => console.log(movies))
-        .catch(error => alert(error))
-    }
-    useEffect(getMovies, [])
-
     return (
         <div>
+            <MovieList genre='28' />
+            <MovieList genre='35' />
             <NewlyReleasedList />
             <ActionList />
             <ComedyList />

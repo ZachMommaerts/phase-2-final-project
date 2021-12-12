@@ -3,8 +3,6 @@ import Header from './Header';
 import MovieListContainer from './MovieListContainer';
 import { useState} from 'react';
 
-console.log(process.env.REACT_APP_API_KEY)
-
 function App() {
   const [ search, setSearch] = useState('');
 
