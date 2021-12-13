@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import MovieCard from './MovieCard';
 
 const ListOfMovies = styled.div `
+    margin: 2em;
     display: flex;
     overflow: auto;
 `;

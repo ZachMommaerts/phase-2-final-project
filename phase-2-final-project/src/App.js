@@ -1,7 +1,10 @@
 import './App.css';
 import Header from './Header';
 import MovieListContainer from './MovieListContainer';
-import { useState} from 'react';
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import WatchList from './WatchList';
+import MovieDetails from './MovieDetails';
 
 function App() {
   const [ search, setSearch] = useState('');
@@ -9,7 +12,11 @@ function App() {
   return (
     <div className="App">
       <Header search={search} setSearch={setSearch}/>
-      <MovieListContainer />
+      <Routes>
+        <Route path='/' element={<MovieListContainer />} />
+        <Route path='watchlist' element={<WatchList />} />
+        <Route path=':movieId' element={<MovieDetails />} />
+      </Routes>
     </div>
   );
 }

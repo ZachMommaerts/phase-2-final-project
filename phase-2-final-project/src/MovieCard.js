@@ -7,10 +7,12 @@ const PosterImage = styled.img`
 `;
 
 function MovieCard( { movie }) {
+
     return (
         <div>
             <PosterImage src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
             <p>{movie.title}</p>
+            <button>Add to Watchlist</button>
         </div>
     )
 }

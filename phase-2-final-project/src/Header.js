@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const NavBar = styled.div`
     display: flex;
+    align-items: center;
 `;
 
 function Header({ search, setSearch }) {
