@@ -8,7 +8,7 @@ const ListOfMovies = styled.div `
     overflow: auto;
 `;
 
-function MovieList({ genre, genreName }) {
+function MovieList({ genre, genreName, setMovie }) {
     const [ movies, setMovies] = useState([])
 
     const fetchMovies = () => {
@@ -25,6 +25,7 @@ function MovieList({ genre, genreName }) {
             <MovieCard
                 key={movie.id}
                 movie={movie}
+                setMovie={setMovie}
             />
         )
     })
